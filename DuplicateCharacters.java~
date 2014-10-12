@@ -1,0 +1,38 @@
+public class DuplicateCharacters{
+
+    public static void Main(String[] args){
+
+
+
+
+
+    }
+
+    public static String RemoveDuplicateCharacters(String target){
+	
+	int head = 0;
+	int tail = target.length -1;
+	
+	while (head < tail){
+	    
+	    char temp = target[head];
+	    
+	    for(int i=head+1; i < target.length; i++){
+		
+		if(target[i] == temp){
+		    target.deleteCharAt(i);
+		    tail--;
+		}
+	    
+	    }
+	    
+	    head++;
+
+	}
+	return target;
+	
+    }
+
+
+
+}
