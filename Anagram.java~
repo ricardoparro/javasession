@@ -1,0 +1,24 @@
+public class Anagram{
+
+
+    public static void main(String[] args){
+	
+	String original = "satin";
+	String anagram = "stain";
+	
+	
+	boolean result = isAnagram();
+	System.out.println(result);
+
+    }
+
+    public static boolean isAnagram(String original, String anagram){
+
+
+	return sort(original) == sort(anagram);
+
+    }
+
+
+
+}
