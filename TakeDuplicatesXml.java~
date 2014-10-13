@@ -16,6 +16,15 @@ import javax.xml.parsers.DocumentBuilder;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 
+//for SAX parsing 
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+
+
 
 public class TakeDuplicatesXml{
 
@@ -32,6 +41,7 @@ public class TakeDuplicatesXml{
 	   
 	    //print the new document out
 	    printXmlDocument(doc);
+	   
 	} catch (Exception ex) {
 	    ex.printStackTrace();
 	}
@@ -52,13 +62,17 @@ public class TakeDuplicatesXml{
 	
     }
     
-    //with recursion 
+    //with recursion using DOM
     public static void removeDuplicate(Node node, List<String>  aux){
 	
-	System.out.println(node.getNodeName());	
-	//check if that node exists already
+	//check if that node already exists
 	if(aux.contains(node.getNodeName())){
-	    node.getParentNode().removeChild(node);
+    
+	    Node parentNode = node.getParentNode();
+	    String value = parentNode.getTextContent();	    
+	    parentNode.removeChild(node);
+	    parentNode.setTextContent(value);
+
 	}else{
 	    //add node name to aux list
 	    aux.add(node.getNodeName());
@@ -74,4 +88,6 @@ public class TakeDuplicatesXml{
 	    }
 	}
     }
+
+
 }
