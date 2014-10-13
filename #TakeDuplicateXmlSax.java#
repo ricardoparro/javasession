@@ -1,0 +1,18 @@
+
+
+
+
+
+public class TakeDuplicateXmlSax{
+
+    public static void main(String[] args){
+	
+	parseDocument();
+    }
+
+    public static void parseDocument() {
+        // parse
+        //SAXParserFactory factory = SAXParserFactory.newInstance();
+        try {
+            SAXParser parser = new SAXParser();
+            
