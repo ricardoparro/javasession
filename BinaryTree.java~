@@ -1,0 +1,37 @@
+class BinaryTree{
+
+    //search insert, search and delete quickly  O(log n) to perform an operation
+
+    public static main(String[] args){
+	
+	
+
+    }
+
+
+}
+
+class Node{
+
+    int Key;
+    String name;
+
+    Node leftChild;
+    Node rightChild;
+
+    Node(int key, String name){
+
+	this.Key = key;
+	this.name = key;
+    }
+
+
+    public String toString(){
+
+	return name + " has a key " + key;
+
+    }
+
+}
+
+
