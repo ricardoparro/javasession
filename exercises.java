@@ -55,4 +55,4 @@ public static isUniqueChars(String str){
 }
 
 
-
+<tag>text<b><b>bold</b> bold again</b><br/>the end </tag>

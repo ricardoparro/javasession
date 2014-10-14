@@ -1,2 +1,3 @@
-<?xml version="1.0" ?><tag>text<b><b>bold</b> bold again</b><br/>the end </tag>
+<?xml version="1.0" ?>
+<tag>text<b><b>bold</b> bold again</b><b><br/>the end </tag>
 
