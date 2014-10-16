@@ -1,0 +1,71 @@
+import java.util.List;
+import java.util.Queue;
+import java.util.ArrayList;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+public class BreadthFirstSearch{
+    
+    private static void main(){
+	
+	Node[] nodes = getList();
+      
+	doBfs(nodes);
+	
+    }
+
+    private static void doBfs(Node[] nodes){
+	Queue q = new ConcurrentLinkedQueue<Node>();
+	
+	if(nodes != null){
+	    
+	    Node focusNode;
+
+	    if( nodes.vertices!= null){
+		doBfs(nodes.vertices);
+	    }
+	    else{
+		
+	    }
+	}
+	
+    }
+
+    private static List<Node> getList(){
+	
+	List<Node> nodes = new ArrayList<Node>();
+	Node a = new Node('A', true);
+	Node b = new Node('B', false);
+	Node f = new Node('F', false);
+	Node g = new Node('G', false);
+	b.vertices = new ArrayList<Node>();
+	b.vertices.add(f);
+	b.vertices.add(g);
+	
+	Node c = new Node('C', false);
+	Node d = new Node('D', false);
+	a.vertices = new ArrayList<Node>();
+	a.vertices.add(b);
+	a.vertices.add(c);
+	a.vertices.add(d);
+	a.vertices.add(g);
+		       
+	return nodes;
+    }
+    
+}
+
+
+class Node{
+    
+    char value;
+    boolean isRoot;
+    boolean visited = false;
+    List<Node> vertices;
+    
+    public Node(char value, boolean isRoot ){
+	this.value = value;
+	this.isRoot = isRoot;
+    }
+}
+

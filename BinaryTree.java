@@ -69,6 +69,8 @@ public class BinaryTree{
 	}
     }
 
+    //here it really depends how you want to search it. here it looks always for the left child first
+    //and goes down the tree
     public Node findNode(int key){
 
 	Node focusNode = root;
@@ -87,6 +89,37 @@ public class BinaryTree{
 	}
 
 	return focusNode;
+    }
+
+    public void DeleteNode(int key){
+	
+	Node focusNode = root;
+	Node nodeToDelete;
+	Node parentOfNodeToDelete;
+	
+        while(parentOfNodeToDelete == null && n){
+
+            if( focusNode.leftChild.key == key){
+                parentOfNodeToDelete = focusNode;
+		nodeToDelete = focusNodeLeftChild;
+		
+            }
+
+	    
+	    else{
+		focusNode = focusNode
+	     }
+	}
+
+            if(focusNode == null)
+                return null;
+        }
+
+        
+
+	
+	
+	
     }
 
     public static void main(String[] args){
