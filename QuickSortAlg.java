@@ -5,7 +5,7 @@ public class QuickSortAlg{
 
 	public static void main(String[] args){
 
-		arr = new int[]{65,70,75,80,85,60,55,50,77};
+		arr = new int[]{0,0,0,0,0,1,2};
 
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print("||" + i + "=>" + arr[i]);
@@ -52,17 +52,16 @@ public class QuickSortAlg{
 				right--;
 			}
 
-			if(left == right){
-				System.out.println("left is = right so start again");
-
-	             break;
+			if(left == right || arr[left] == arr[right]){
+				System.out.println("left is == right so start again");
+	            break;
 			}
 	         else {
 	            swap(left, right);
             }
         }
 
-        if(right == left)
+        if(right >= left)
         	return right;
 
         swap(left,right);
